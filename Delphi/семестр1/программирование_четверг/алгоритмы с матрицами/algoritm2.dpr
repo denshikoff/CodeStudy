@@ -1,0 +1,37 @@
+//сколько строк матрицы упорядочно по возрастанию
+program algoritm2;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils;
+
+const n = 3; m = 5;
+var A:array [1..n, 1..m] of ineteger;
+    count, i, j, OK: integer;
+begin
+  for i := 1 to n do
+    for j := 1 to m do
+      read(A[i,j]);
+  readln;
+  //обнуляем счетчик
+  count := 0;
+  //начинаем идти по строкам
+  for i := 1 to n do
+    begin
+      //пока условие не нарушено и столбец не кончился
+      Ok := true;
+      j := 1;
+      while OK and (j < m) do
+        if A[i,j] < A[i+1,j+1]
+        then j := j + 1
+        else OK := false
+
+      //если условие не нарушилось, а столбец кончился
+      if OK
+      then count := count + 1
+    end;
+    writeln(count);
+    readln;
+end.
+ 

@@ -1,0 +1,32 @@
+program nummer14_char;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils,
+  Windows;
+
+const n = 10;
+
+var Ch: array[1..n] of char;
+    i, j: integer;
+
+begin
+  SetConsoleCP(1251);
+  SetConsoleOutputCP(1251);
+
+  writeln('¬ведите текст: ');
+  for i := 1 to n do
+    read(Ch[i]);
+  readln;
+
+  for i := 1 to n do
+    if(Ch[i-1] = 'c') and (Ch[i] = 'b')
+    then
+      for j:= i to n do
+        Ch[j]:= Ch[j+1];
+
+  for i := 1 to n do
+    write(Ch[i]);
+  readln;
+end.

@@ -1,0 +1,17 @@
+program nummer60;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils,
+  Windows;
+var a: real;
+    n: integer;
+begin
+  writeln('Read n');
+  read(n);
+  a := 0;
+  a := a + (n-1)/(n+1) + sin((n-1) * (n-1) * (n-1)/ (n+1));
+  writeln('Значение числа:', a:1:4);
+  readln;
+end.

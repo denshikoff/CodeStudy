@@ -1,0 +1,31 @@
+{Составьте программу вычисления функции f(x) (x*x - x) <= 1 ==> x := x*x*x - 3 * x + 8 иначе x := 1 / (x*x*x - 3 * x + 8) }
+program book_5a;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils,
+  Windows;
+
+var x, y:real;
+
+begin
+  //переход на верную кодировку
+  SetConsoleCP(1251);
+  SetConsoleOutputCP(1251);
+
+  //вводится значение x
+  writeln('Введите значение аргумента');
+  readln(x);
+
+  //выбирается необходимая функция
+  if (x*x - x) <= 1
+  then
+    y := sqr(x) * x - 3 * x + 8
+  else
+    y := 1 / (sqr(x) * x - 3 * x + 8);
+
+  //выводим значение функции
+  writeln('Значение функции: ', y:5:3);
+  readln;
+end.

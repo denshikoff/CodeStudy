@@ -1,0 +1,26 @@
+program nummer6;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils;
+
+var 
+  a: array [1..N] of integer;
+  N, i, k: integer; // Количество элементов в массиве
+
+
+begin
+  N := 50;
+  for i:=1 to N do
+  a[i] := Random(50);
+
+  for i := 1 to N do
+  begin
+  if a[i] <> a[N]
+  then
+  k := k + 1;
+  end;
+writeln(k);
+readln(N);
+end.

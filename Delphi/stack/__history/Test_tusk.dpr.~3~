@@ -1,0 +1,84 @@
+program Test_tusk;
+{Проверить правильность расстановки скобок 3-х типов в выражении.}
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils, UStack, Windows;
+const
+  D1 = ['(', '[', '{'];
+  D2 = [')', ']', '}'];
+
+
+var
+  S : String;
+  Res : Integer;
+ 
+
+function GetOpen(const aCh : Char) : Char;
+begin
+  GetOpen := #0;
+  case aCh of
+    ')' : GetOpen := '(';
+    ']' : GetOpen := '[';
+    '}' : GetOpen := '{';
+  else
+    Writeln('function GetOpen. Ошибка.');
+  end;
+end;
+
+
+function ParsePh(const aStr : String) : Integer;
+var
+  Stack : TStack;
+  i, Res : Integer;
+  Ch : Char;
+begin
+  Stack.top := 0;
+  Res := 0;
+  for i := 1 to Length(aStr) do begin
+    if (aStr[i] in D1) and not pushStack(Stack, aStr[i])then
+      begin
+          Res := -2;
+          Break;
+
+      end
+    else if aStr[i] in D2 then
+      begin;
+        if popStack(Stack, Ch)  then begin
+          if Ch <> GetOpen(aStr[i]) then begin
+            Res := i;
+            Break;
+          end;
+        end else begin
+          Res := i;
+          Break;
+      end;
+  end;
+ 
+  if Res = 0 then begin
+    if popStack(Stack, Ch) then Res := -1;
+  end;
+ 
+  ParsePh := Res;
+end;
+
+begin
+  SetConsoleCP(1251);
+  SetConsoleOutputCp(1251);
+  repeat
+    Writeln('Введите строку:');
+    Readln(S);
+ 
+    Res := ParsePh(S);
+    case Res of
+      -2 : Writeln('Ошибка!Переполнение стека.');
+      -1 : Writeln('Не хватает закрывающихся скобок.');
+      0  : Writeln('Скобки согласованы.');
+      else
+        Writeln('Скобкине несогласованы');
+    end;
+
+    Writeln('Повторить - Enter, выход любой другой символ + Enter.');
+    Readln(S);
+  until S <> '';
+end.

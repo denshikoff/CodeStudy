@@ -1,0 +1,99 @@
+program Test_tusk;
+{Проверить правильность расстановки скобок 3-х типов в выражении.}
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils, UStack, Windows;
+const
+  open = ['(', '[', '{'];
+  close = [')', ']', '}'];
+
+
+var
+  S : String;
+  Res : Integer;
+ 
+//Для закрывающей скобки возвращает соответствующую открывающую скобку.
+function GetOpen(const aCh : Char) : Char;
+begin
+  GetOpen := #0;
+  case aCh of
+    ')' : GetOpen := '(';
+    ']' : GetOpen := '[';
+    '}' : GetOpen := '{';
+  else
+    Writeln('function GetOpen. Ошибка.');
+  end;
+end;
+
+
+//Исследование строки на предмет согласованности скобок.
+function ParsePh(const Str : String) : Integer;
+var
+  Stack : TStack;
+  i, Res : Integer;
+  Ch : Char;
+begin
+  //Инициализируем стек.
+  Stack.top := 0;
+ 
+  //0 - успешно.
+  Res := 0;
+  for i := 1 to Length(Str) do
+    if Str[i] in open then
+        //Нашли открывающую скобку - добавляем её в стек.
+        if not PushStack(Stack, Str[i]) then
+          begin
+            //-2 - переполнение стека.
+            Res := -2;
+            Break;
+          end
+    else if Str[i] in close then
+        //Нашли закрывающу скобку - берём элемент из вершины стека.
+        if PopStack(Stack, Ch) and Ch <> GetOpen(Str[i]) then
+            //Стек не пуст.
+              begin
+                //Взятая из вершины стека скобка не соответствует текущей закрывающей скобке.
+                //Согласованность нарушена.
+                //(Res > 0) - нарушение целостности, Res равен индексу символа (скобки) на котором
+                //произошло нарушение согласованности скобок.
+                Res := i;
+                Break;
+              end
+    else
+        begin
+          //Стек пуст. Значит нет соответствия для текущей закрывающей скобки.
+          //Согласованность нарушена.
+          //(Res > 0) - нарушение целостности, Res равен индексу символа (скобки) на котором
+          //произошло нарушение согласованности скобок.
+          Res := i;
+          Break;
+        end;
+    end;
+
+if (Res = 0) and popStack(Stack, Ch)  then Res := -1;
+
+
+  ParsePh := Res;
+end;
+
+begin
+  SetConsoleCP(1251);
+  SetConsoleOutputCp(1251);
+  repeat
+    Writeln('Введите строку:');
+    Readln(S);
+ 
+    Res := ParsePh(S);
+    case Res of
+      -2 : Writeln('Ошибка!Переполнение стека.');
+      -1 : Writeln('Не хватает закрывающихся скобок.');
+      0  : Writeln('Скобки согласованы.');
+      else
+        Writeln('Скобкине несогласованы');
+    end;
+
+    Writeln('Повторить - Enter, выход любой другой символ + Enter.');
+    Readln(S);
+  until S <> '';
+end.
