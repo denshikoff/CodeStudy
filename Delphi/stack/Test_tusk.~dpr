@@ -3,7 +3,10 @@ program Test_tusk;
 {$APPTYPE CONSOLE}
 
 uses
-  SysUtils, UStack, Windows;
+  SysUtils,
+  UStack,
+  Windows;
+
 const
   open = ['(', '[', '{'];
   close = [')', ']', '}'];
@@ -48,7 +51,7 @@ begin
       end;
     end else if aStr[i] in close then begin;
       //Нашли закрывающу скобку - берём элемент из вершины стека.
-      if PopStack(Stack, Ch) then begin
+      if PopStack(Stack, Ch) and then begin
         //Стек не пуст
         if Ch <> GetOpen(aStr[i]) then begin
           {Взятая из вершины стека скобка не соответствует текущей закрывающей скобке.

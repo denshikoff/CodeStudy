@@ -8,6 +8,59 @@
 .head {
     font-size: 13;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 3%;
     
+}
+em {
+    padding: 0;
+    margin: 0;
+    margin-right: 4px;
+}
+strong {
+    padding: 0;
+    margin: 0;
+    margin-right: 4px;
+}
+ins {
+    padding: 0;
+    margin: 0;
+    margin-right: 4px;
+}
+.top_article {
+    margin-bottom: 10;
+}
+.mid_article {
+    text-align: justify;
+    color:black;
+}
+.h1 {
+    font-size: 18;
+    font-style: normal;
+}
+.greece {
+    text-indent: 40px;
+    margin-top: 20px;
+}
+.writer {
+    font-size: 18;
+    text-align: right;
+    margin-top: 60;
+}
+.hydro {
+    margin-bottom: 50px;
+    margin-top: 70px;
+    text-align: left;
+}
+.def {
+    margin-bottom: 20px;
+    margin-left:12.5%;
+    text-indent: -20px;
+}
+.sub {
+    margin: 0;
+    vertical-align: sub;
+}
+.sup{
+    	vertical-align: sup;
+	margin: 0;
 }
