@@ -5,11 +5,39 @@
     margin-right: 10%;
     
 }
-.head {
-    font-size: 13;
+.top {
+    font-size: 14px;
     text-align: center;
-    margin-top: 3%;
-    
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+.author {
+	text-align: right;
+	font-size: 20px;
+}
+.middle{
+	margin-bottom: 8%;
+}
+.middle_text {
+	font-size: 16px;
+	text-indent: 40px;
+	margin-bottom: 15px
+}
+
+.top_text {
+    margin-bottom: 9px;
+}
+
+.h {
+    font-size: 20px;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.middle_bottom{
+	font-size: 16px;
+	margin-bottom: 8%;
+	text-indent: 40px;
 }
 em {
     padding: 0;
@@ -26,17 +54,12 @@ ins {
     margin: 0;
     margin-right: 4px;
 }
-.top_article {
-    margin-bottom: 10;
+
+.bottom {
+	margin-bottom: 10%;
+	font-size: 16px;
 }
-.mid_article {
-    text-align: justify;
-    color:black;
-}
-.h1 {
-    font-size: 18;
-    font-style: normal;
-}
+
 .greece {
     text-indent: 40px;
     margin-top: 20px;
@@ -56,6 +79,7 @@ ins {
     margin-left:12.5%;
     text-indent: -20px;
 }
+
 .sub {
     margin: 0;
     vertical-align: sub;
