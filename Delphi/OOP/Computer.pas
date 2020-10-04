@@ -1,7 +1,7 @@
 unit Computer;
 
 interface
- type ComputersDetal = CLASS
+ type ComputersDetal = class
   id,count,price:integer;
  end;
 

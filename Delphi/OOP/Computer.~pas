@@ -1,21 +1,10 @@
 unit Computer;
 
 interface
- type Computers = object
-  id,year,energy:integer;
-  procedure power(answer:string);
-  procedure unpower(answer:string);
+ type ComputersDetal = CLASS
+  id,count,price:integer;
+ end;
 
 implementation
- procedure Computers.power(answer:string);
- begin
-  if answer = 'Включить' then
-    writeln('Компьютер включен! Начать работу');
- end;
 
- procedure Computers.unpower(answer:string);
- begin
-  if answer = 'Выключить' then
-    writeln('Компьютер выключен! Спасибо за работу');
- end;
 end.

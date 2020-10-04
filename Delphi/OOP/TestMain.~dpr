@@ -11,5 +11,6 @@ var Comp:OperMemory;
 begin
   SetConsoleCP(1251);
   SetConsoleOutputCP(1251);
+  Comp.
 
 end.

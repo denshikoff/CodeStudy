@@ -1,0 +1,15 @@
+unit ListDetal;
+
+interface
+
+uses
+  Classes, Windows;
+
+type
+  ListDetal = class
+  end;
+implementation
+
+
+end.
+ 
