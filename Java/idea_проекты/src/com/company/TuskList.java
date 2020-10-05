@@ -19,7 +19,7 @@ public class TuskList {
             n--;
         }
     }
-
+    //метод вычисления
     static double make(LinkedList<Double> list){
         Scanner in = new Scanner(System.in);
         System.out.println("Read count numbers");
@@ -32,6 +32,7 @@ public class TuskList {
         System.out.println("Read x");
         double x = in.nextDouble();
 
+        //проходим по всем элементам и суммируем их
         for (Double sumItem :
                 list) {
             sum += sumItem * Math.pow(x, n);
