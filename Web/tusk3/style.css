@@ -1,0 +1,32 @@
+.blue{
+    background-color:#000080;
+}
+.black{
+    background-color:#000000;
+}
+.red{
+    background-color:#B22222;
+}
+.white{
+    background-color:#DCDCDC;
+}
+.yellow{
+    background-color:#FFD700;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0
+}
+table, td, th {
+    border: 8px solid #000;
+}
+td, th {
+    padding: 3px;
+    width: 30px;
+    height: 35px;
+}
+th {
+    background-color: #7accee;
+}
+
