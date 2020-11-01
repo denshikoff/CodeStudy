@@ -1,4 +1,4 @@
-package com.company.study;
+package com.company;
 
 public class Study {
     public static int addOne(int x){

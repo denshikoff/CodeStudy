@@ -1,2 +1,5 @@
-package com.company;public class Detail {
+package com.company;
+
+public class Detail {
+     
 }

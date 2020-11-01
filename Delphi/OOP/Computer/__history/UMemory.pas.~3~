@@ -1,0 +1,30 @@
+unit UMemory;
+
+interface
+  uses SysUtils;
+  type
+    SizeMemory = set of [4,8,16,32,64];
+    Memory = class
+      private
+        size:SizeMemory;
+      public
+        function getSize():SizeMemory;
+        procedure setSize(n:integer);
+    end;
+
+
+implementation
+  function Memory.getSize():SizeMemory;
+  begin
+   result := size;
+  end;
+
+  procedure Memory.setSize(n:integer);
+  begin
+    if n in SizeMemory then
+      size := n
+    else
+      Exception.Create('Size is false');
+  end;
+
+end.

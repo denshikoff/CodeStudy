@@ -33,12 +33,10 @@ public class TuskList {
         double x = in.nextDouble();
 
         //проходим по всем элементам и суммируем их
-        for (Double sumItem :
-                list) {
+        for (Double sumItem : list) {
             sum += sumItem * Math.pow(x, n);
             n--;
         }
         return sum;
     }
-
 }

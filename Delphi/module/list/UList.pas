@@ -1,12 +1,12 @@
 Unit ULIst;
 
 interface
-	type 
-		TInfo = string;
+	type
+		TInfo = integer;
 
-		PNode = ^TNode;
-		
-		TNode = record
+		PNode = ^Tnode;
+
+		Tnode = record
               info: TInfo;
               next: PNode;
 		        end;
@@ -19,13 +19,15 @@ interface
 	procedure Init(var list: TList);
 	procedure Add(var list: TList; info:TInfo);  //добавление элемента
 	function Contains(list: TList; info:TInfo): boolean; //проверка на наличие элемента
-	procedure Delete(var list: TList; info:TInfo);    //удаление элемента
+	procedure search(var list: TList; info:TInfo);    //удаление элемента
 	procedure Clear(var list: TList);    //очистить список
 	function ToString(list: TList): string; //создание строки
   function Get(list: TList; index: integer): TInfo;    //нахождение элемента
-	
+
 implementation
-	
+
+uses SysUtils;
+
 	function InfoToString(info: TInfo):string;
 	begin
 		result := '"' + info + '"';
@@ -72,13 +74,13 @@ implementation
     tmp: PNode;
     i: integer;
   begin
-    {if index >= list.count then
-      raise Exception.Create('Index out of range'); }
+    if index >= list.count then
+      raise Exception.Create('Index out of range');
     tmp := list.head;
     for i := 1 to index do tmp := tmp^.next;
       result := tmp^.info;
   end;
-	
+
 	function Contains(list: TList; info:TInfo): boolean;
 	var
 		tmp: PNode;
@@ -92,8 +94,22 @@ implementation
 			else tmp := tmp^.next;
 		end;
 	end;
-	
-	procedure Delete(var list: TList; info:TInfo);
+
+  function Delete(var tmp,previous:PNode; var list:TList):boolean;
+  begin
+   if tmp = list.head then
+      list.head := tmp^.next
+   else
+      previous^.next := tmp^.next;
+
+   dispose(tmp);
+   dec(list.count);
+   result := true;
+  end;
+
+
+	//поиск и удаление элемента
+	procedure search(var list: TList; info:TInfo);
 	var
 		previous, tmp: PNode;
 		done: boolean;
@@ -104,18 +120,8 @@ implementation
 		while (not done) AND (tmp <> nil) do
 		begin
 			if tmp^.info = info
-			then 
-				begin
-					if tmp = list.head
-					then list.head := tmp^.next
-					else 
-						begin
-							previous^.next := tmp^.next;
-						end;
-					dispose(tmp);
-					dec(list.count);
-					done := true;
-				end
+			then
+         done := Delete(tmp,previous,list)
 			else
 				begin
 					previous := tmp;
@@ -123,9 +129,9 @@ implementation
 				end;	
 		end;
 	end;
-	
+
 	procedure Clear(var list: TList);
-	var 
+	var
 		tmp: PNode;
 	begin
 		while list.head <> nil do
@@ -156,6 +162,5 @@ implementation
 			end;
 		result := result + ']';
 	end;
-	
+
 end.
-		

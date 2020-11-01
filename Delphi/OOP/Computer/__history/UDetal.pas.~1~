@@ -1,0 +1,24 @@
+unit UDetal;
+{}
+interface
+  uses SysUtils;
+  type
+    Detail = class
+      private
+        id:integer;
+      public
+        function getId():integer;
+        procedure setId(iden:integer);
+    end;
+
+implementation
+  function Detail.getId():integer;
+  begin
+    result := id;
+  end;
+
+  procedure Detail.setId(iden:Integer);
+  begin
+    id := iden;
+  end;
+end.

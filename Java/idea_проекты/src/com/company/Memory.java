@@ -1,4 +1,5 @@
 package com.company;
 
-public class Memory {
+public class Memory extends ComputerDetail{
+
 }

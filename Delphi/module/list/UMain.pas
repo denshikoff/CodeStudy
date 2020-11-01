@@ -4,7 +4,8 @@ uses
   SysUtils,
   Windows,
   UList,
-  UDate in 'UDate.pas';
+  UDate in 'UDate.pas',
+  LinkedList in '..\..\OOP\tusk6\LinkedList.pas';
 
 var
 	List: TList;
@@ -16,7 +17,7 @@ begin
     Writeln(ToString(List));
     Writeln(List.count);
     Writeln(Contains(List, '456'));
-    Delete(List, '456');
+    search(List, '456');
     Writeln(List.count);
     Writeln(Contains(List, '456'));
     Writeln(ToString(List));

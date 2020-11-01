@@ -1,13 +1,14 @@
 package com.company;
 
 import java.util.Queue;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class QueueWork {
-    Queue pushRandom(Queue queue){
+    static Queue pushRandom(Queue queue){
         int a=0;
         int b=10;
         for (int i = 0; i < 5; i++) {
-            int x = a + (int) (Math.random()*b);
+            int x =  ThreadLocalRandom.current().nextInt(0, 100); //это эффективный метод рандом!!!
             queue.add(x);
             System.out.println(x);
         }

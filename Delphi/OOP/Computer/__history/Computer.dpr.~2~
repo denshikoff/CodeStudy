@@ -1,0 +1,11 @@
+program Computer;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils,
+  UMemory in 'UMemory.pas';
+var d:
+begin
+
+end.

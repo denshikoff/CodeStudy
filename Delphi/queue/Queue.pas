@@ -63,6 +63,7 @@ implementation
   begin
 
     result:=queue.head.inf;
+    //перестановка головы  и удаление первого элемента
     tmp := queue.head;
     queue.head:= queue.head^.next;
     dispose(tmp);

@@ -1,4 +1,6 @@
 package com.company;
 
-public class ComputerDetal {
+public abstract class ComputerDetail {
+    private int id;
+
 }
