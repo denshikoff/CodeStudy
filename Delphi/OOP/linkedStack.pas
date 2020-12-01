@@ -24,7 +24,7 @@ interface
 implementation
   constructor TlinkedStack.create();
   begin
-    inherited create();
+    inherited create;
     head := nil;
   end;
 

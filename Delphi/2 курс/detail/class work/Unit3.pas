@@ -1,0 +1,32 @@
+unit Unit3;
+
+interface
+uses
+  UPerson;
+
+type
+  Tnode = class
+  private
+    Finfo: Tperson;
+    Fnext: Tnode;
+  public
+    constructor Create(info: Tperson);
+    destructor Destroy; override;
+    property info: TPerson read Finfo;
+    property next: Tnode read Fnext write Fnext;
+  end;
+
+implementation
+constructor Tnode.Create(info: TPerson);
+begin
+  inherited Create;
+  Finfo := info;
+  Fnext := nil;
+end;
+
+destructor Tnode.Destroy;
+begin
+  inherited Destroy
+end;
+
+end.
