@@ -35,6 +35,17 @@ begin
   inherited Destroy
 end;
 
+procedure TList.clear;
+var tmp:Tnode;
+begin
+  while not IsEmpty do
+    begin
+      tmp := Fhead;
+      Fhead := Fhead.next;
+      tmp.destroy;
+    end;
+end;
+
 procedure Tlist.Add(info: Detail);
 var
   tmp: Tnode;

@@ -1,0 +1,508 @@
+unit UTree;
+
+interface
+
+uses ComCtrls, Math, SysUtils, UNode, Contnrs;
+
+type
+
+  // Класс "Бинарное дерево"
+  TTree = class
+  private
+    // Корень дерева
+    FRoot : TNode;
+  public
+
+    // Создание пустого дерева
+    constructor Create;
+    // Разрушение дерева
+    destructor Destroy; override;
+ 
+    // Добавление элемента el в дерево
+    procedure Add (el : TElem);
+
+    // Поиск элемента el в дереве
+    function Find (el : TElem) : boolean;
+
+    // Удаление элемента el из дерева
+    function Delete (el : TElem) : boolean;
+
+    // Проверка дерева на пустоту
+    function IsEmpty : boolean;
+
+    // Процедура очистки дерева
+    procedure Clear;
+
+    // Процедура генерации дерева-поиска из N элементов
+    procedure Random (N : integer);
+
+    // Процедура отображения элементов дерева на компонент TreeView
+    procedure Show (TV : TTreeView);
+
+    // Функция конвертирования дерева в строку (обход сверху-вниз)
+    function Prefix : string;
+
+    // Функция конвертирования дерева в строку (обход слева-направо)
+    function Infix : string;
+
+    // Функция конвертирования дерева в строку (обход снизу-вверх)
+    function Postfix : string;
+
+    {обход (печать элементов) дерева без контроля перехода
+     с одного уровня на другой}
+
+    function ViewByQueue_without_checking_levels : string;
+    {обход (печать элементов) дерева с контролем перехода
+     с одного уровня на другой}
+    function ViewByQueue_with_checking_levels : string;
+
+    // Нерекурсивный обход дерева "Сверху вниз"
+    function ViewByStack_node_left_right : string;
+
+    // Нерекурсивный обход дерева "Слева направо"
+    function ViewByStack_left_node_right : string;
+  end;
+implementation
+
+// Создание пустого дерева
+constructor TTree.Create;
+begin
+  FRoot:=nil
+end;
+
+// Разрушение дерева
+
+destructor TTree.Destroy;
+begi
+  Clear;
+  inherited;
+end;
+
+// Процедура очистки дерева
+procedure TTree.Clear;
+begin
+  FreeAndNil(FRoot)
+end;
+
+
+// Добавление элемента el в дерево
+procedure TTree.Add(el: TElem);
+begin
+  if IsEmpty then
+    FRoot:=TNode.Create(el)
+  else
+    FRoot.Add(el);
+end;
+
+// Удаление элемента el из дерева
+
+function TTree.Delete(el: TElem): boolean;
+var
+  del_node: TNode; // удаляемый узел
+begin
+  del_node:=nil;
+  FRoot.DelNode(FRoot, el, del_node);
+  Result:=del_node <> nil;
+  If Result then
+    begin
+      del_node.Create; // это чтобы выставить левую и правую ссылки в nil
+      del_node.Destroy;
+    end;
+end;
+
+// Поиск элемента в дереве
+function TTree.Find(el: TElem): boolean;
+begin
+  Result:=FRoot.Find(el)
+end;
+
+// Функция конвертирования дерева в строку (обход слева-направо)
+function TTree.Infix: string;
+begin
+  Result:='';
+  if FRoot<>nil then
+    Result:=FRoot.Infix
+end;
+
+ 
+
+// Проверка дерева на пустоту
+function TTree.IsEmpty: boolean;
+begin
+  Result:=FRoot = nil
+end;
+
+// Функция конвертирования дерева в строку (обход снизу-вверх)
+function TTree.Postfix: string;
+begin
+  Result:='';
+  if FRoot<>nil then
+    Result:=FRoot.Postfix
+end;
+
+// Функция конвертирования дерева в строку (обход сверху-вниз)
+function TTree.Prefix: string;
+begin
+  Result:='';
+  if FRoot<>nil then
+    Result:=FRoot.Prefix
+end; 
+
+// Процедура генерации дерева-поиска из N элементов
+
+procedure TTree.Random(N: integer);
+
+begin
+
+  Clear;
+
+  While N>0 do
+
+    begin
+
+      Add(RandomRange(MinElem,MaxElem+1));
+
+      dec(N)
+
+    end
+
+end;
+
+ 
+
+// Процедура отображения элементов дерева на компонент TreeView
+
+procedure TTree.Show(TV: TTreeView);
+
+begin
+
+  TV.Items.Clear;
+
+  if not IsEmpty then
+
+    FRoot.Show(TV, nil);
+
+  TV.FullExpand;
+
+end;
+
+ 
+
+// обход (печать элементов) очереди без контроля перехода
+
+// с одного уровня на другой
+
+function TTree.ViewByQueue_without_checking_levels: string;
+
+var
+
+  // здесь используется очередь из элементов типа pointer, которые совместимы
+
+  // с любыми видами указателей (в том числе указатели на экземпляры объектов)
+
+  // для этого подключен модуль Contnrs
+
+  Q : TQueue;
+
+  // текущий узел
+
+  node : TNode;
+
+begin
+
+  Result:='';
+
+  // Если дерево не пусто
+
+  if FRoot<>nil then
+
+    begin
+
+      // создаем очередь и кладем туда корневой узел
+
+      Q:=TQueue.Create;
+
+      Q.Push(FRoot);
+
+      // пока очередь не пуста
+
+      while Q.Count>0 do
+
+        begin
+
+          // достаем текущий узел из очереди
+
+          node:=Q.Pop;
+
+          // обрабатываем (отображаем) информацию из текущего узла
+
+          Result:=Result+IntToStr(node.Info)+' ';
+
+          // если левое поддерево есть, то кладем его в очередь для посл. обр.
+
+          if node.Left<>nil then
+
+            Q.Push(node.Left);
+
+          // если правое поддерево есть, то кладем его в очередь для посл. обр.
+
+          if node.Right<>nil then
+
+            Q.Push(node.Right);
+
+        end;
+
+      // уничтожаем очередь
+
+      Q.Free
+
+    end;
+
+  Result:=Trim(Result);
+
+end;
+
+ 
+
+{обход (печать элементов) очереди с контролем перехода
+
+с одного уровня на другой}
+
+function TTree.ViewByQueue_with_checking_levels: string;
+
+var
+
+  Q : TQueue;
+
+  node : TNode;
+
+  cnt_cur, cnt_next : integer; // количество элементов на текущем, след. ур-ях
+
+  i : integer;
+
+begin
+
+  Result:='';
+
+  // Если дерево не пусто
+
+  if FRoot<>nil then
+
+    begin
+
+      // создаем очередь, кладем туда корневой узел и запоминаем,
+
+      // что на текущем уровне надо обработать один элемент
+
+      Q:=TQueue.Create;
+
+      Q.Push(FRoot);
+
+      cnt_cur:=1;
+
+      // пока очередь не пуста
+
+      while Q.Count>0 do
+
+        begin
+
+          // пока для следующего уровня ни одно элемента не найдено
+
+          cnt_next:=0;
+
+          // для всех элементов текущего уровня
+
+          for i:=1 to cnt_cur do
+
+            begin
+
+              // достаем текущий узел из очереди
+
+              node:=Q.Pop;
+
+              // обрабатываем (отображаем) информацию из текущего узла
+
+              Result:=Result+IntToStr(node.Info)+' ';
+
+              // если левое поддерево есть, то кладем его в очередь для
+
+              // последующей обработки и увеличиваем кол-во эл-в на след. ур-не
+
+              if node.Left<>nil then
+
+                begin
+
+                  Q.Push(node.Left);
+
+                  inc(cnt_next);
+
+                end;
+
+              // если правое поддерево есть, то кладем его в очередь для
+
+              // последующей обработки и увеличиваем кол-во эл-в на след. ур-не
+
+              if node.Right<>nil then
+
+                begin
+
+                  Q.Push(node.Right);
+
+                  inc(cnt_next)
+
+                end;
+
+            end;
+
+          // фиксируем, что сменился уровень
+
+          Result:=Result+'; ';
+
+          // меняем количество элементов на текущем уровне
+
+          cnt_cur:=cnt_next;
+
+        end;
+
+      // удаляем очередь
+
+      Q.Free
+
+    end;
+
+  Result:=Trim(Result);
+
+end;
+
+ 
+
+// Нерекурсивный обход дерева "Сверху вниз"
+
+function TTree.ViewByStack_node_left_right: string;
+
+var
+
+  // здесь используется стек из элементов типа pointer, которые совместимы
+
+  // с любыми видами указателей (в том числе указатели на экземпляры объектов)
+
+  // для этого подключен модуль Contnrs
+
+  S : TStack;
+
+  // текущий узел
+
+  node : TNode;
+
+begin
+
+  Result:='';
+
+  // Если дерево не пусто
+
+  if FRoot<>nil then
+
+    begin
+
+      // создаем стек и кладем туда корневой узел
+
+      S:=TStack.Create;
+
+      S.Push(FRoot);
+
+      // пока стек не пуст
+
+      while S.Count>0 do
+
+        begin
+
+          // достаем текущий узел из стека
+
+          node:=S.Pop;
+
+          // обрабатываем (отображаем) информацию из текущего узла
+
+          Result:=Result+IntToStr(node.Info)+' ';
+
+          // если правое поддерево есть, то кладем его в стек для посл. обр.
+
+          if node.Right<>nil then
+
+            S.Push(node.Right);
+
+          // если левое поддерево есть, то кладем его в стек для посл. обр.
+
+          if node.Left<>nil then
+
+            S.Push(node.Left);
+
+        end;
+
+      // удаляем стек
+
+      S.Free
+
+    end;
+
+  Result:=Trim(Result);
+
+end;
+
+ 
+
+// Нерекурсивный обход дерева "Слева направо"
+
+function TTree.ViewByStack_left_node_right: string;
+
+var
+
+  S : TStack;
+
+  tmp_node : TNode;
+
+begin
+
+  Result:='';
+
+  if FRoot<>nil then
+
+    begin
+
+      // создаем стек
+
+      S:=TStack.Create;
+
+      // становимся на корень и пытаемся спуститься до упора влево
+
+      tmp_node:=FRoot;
+
+      repeat
+
+        // пока не дошли до самого низа
+
+        while tmp_node<>nil do
+
+          begin
+
+            // откладывая пройденные узлы в стеке
+
+            S.Push(tmp_node);
+            // спускаемся влево
+            tmp_node:=tmp_node.Left;
+          end;
+        // Достаем элемент из стека (крайний левый узел)
+        tmp_node:=S.Pop;
+        // Обрабатываем его (отображаем информацию)
+        result:=Result+IntToStr(tmp_node.Info)+' ';
+        // После этого уходим направо
+        tmp_node:=tmp_node.Right;
+      // выходим из цикла, если узел пустой (его нет) и стек пустой
+      until (tmp_node=nil) and (S.Count = 0);
+      // удаляем стек
+      S.Free;
+    end;
+  Result:=Trim(Result);
+
+end;
+
+end.

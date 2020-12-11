@@ -1,0 +1,51 @@
+unit UComplex;
+
+interface
+type complex = record
+                re, im: real
+               end;
+procedure summ(var f,g:complex);
+function modul(var f:complex):real;
+procedure pr(var f,g:complex);
+procedure dif(var f:complex; var n:integer);
+procedure print_complex(var f:complex);
+
+implementation
+//процедура суммы комплексных чисел
+procedure summ(var f,g:complex);
+begin
+   f.re := f.re + g.re;
+   f.im := f.im + g.im;
+end;
+
+//функция модуля комплексного числа
+function modul(var f:complex):real;
+begin
+  modul := sqrt(sqr(f.re) + sqr(f.im))
+end;
+
+//процедура произведения комплексных чисел
+procedure pr(var f,g:complex);
+begin
+  f.re := f.re * g.re - f.im * g.im;
+  f.im := f.im * g.re + f.re * g.im;
+end;
+//процедура деления на число
+procedure dif(var f:complex; var n:integer);
+begin
+  f.re := f.re / n;
+  f.im := f.im / n;
+end;
+//процедура печати
+procedure print_complex(var f:complex);
+begin
+  write('E^Z = ', f.re:4:1);
+  if f.im >= 0 then
+    write(' +')
+  else
+    write(' -');
+  write(abs(f.im):4:1, ' * i');
+end;
+
+
+end.

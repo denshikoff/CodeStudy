@@ -40,7 +40,7 @@ implementation
 
   destructor Detail.destroy;
   begin
-    inherited create;
+    inherited destroy;
   end;
 
   function Detail.toString:String;
