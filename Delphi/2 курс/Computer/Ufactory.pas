@@ -13,9 +13,9 @@ function TFactory.getDetail(tp:Tdetail):Tform;
 var detail:Tform;
 begin
   case tp of
-  CPU:detail := TCpuForm.Create(self);
-  Video:detail := TVideoCardForm.Create(self);
-  Memory:detail := TMemoryForm.Create(self);
+  CPU:detail := TCpuForm.Create(detail);
+  Video:detail := TVideoCardForm.Create(detail);
+  Memory:detail := TMemoryForm.Create(detail);
   end;
   result := detail;
 end;

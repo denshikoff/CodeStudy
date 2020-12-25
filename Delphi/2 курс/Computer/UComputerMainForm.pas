@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, StdCtrls, UVideoCardForm, UReadPrice, UCPU, UDetail, UCPUForm, UMemory, UMemoryForm, UVideoCard, UlinkedList;
+  Dialogs, Menus, Ufactory, StdCtrls, UVideoCardForm, UReadPrice, UCPU, UDetail, UCPUForm, UMemory, UMemoryForm, UVideoCard, UlinkedList;
 
 type
   TMainForm = class(TForm)
@@ -34,7 +34,8 @@ type
     procedure Memory1Click(Sender: TObject);
   private
     list:Tlist;
-  public
+    detailform:Tform;
+    factory:TFactory;
   end;
 
 var
@@ -47,14 +48,14 @@ implementation
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   list := Tlist.create;
+  factory := TFactory.Create;
 end;
 
 procedure TMainForm.AddCPU1Click(Sender: TObject);
-var cpuDetail:TCpuForm;
 begin
-  cpuDetail := TCpuForm.Create(self);
+  detailform := factory.getDetail(CPU);
   if cpuDetail.ShowModal = mrOk then
-    list.Add(cpuDetail.getCpu);
+    list.Add(detailform);  //как добавлять?
   ShowDetail;
 end;
 
