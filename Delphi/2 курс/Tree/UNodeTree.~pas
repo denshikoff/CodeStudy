@@ -26,6 +26,9 @@ type
     procedure Add (el : TElem);
     function Find (el : TElem) : boolean;
     procedure DelNode(var node: TNode; el: TElem; var del_node: TNode);
+    function Prefix:string;
+    function Infix:string;
+    function Postfix:string;
     procedure Show(TV:TTreeView; pn: TTreeNode);
 
     property Info : Telem read FInfo write SetInfo;
@@ -155,6 +158,17 @@ begin
       end;
 end;
 
+// Функция конвертирования дерева в строку (обход слева-направо)
+function TNode.Infix: string;
+begin
+  Result:='';
+  if FLeft<>nil then
+    Result:=Result+FLeft.Infix+' ';
+  Result:=Result+IntToStr(FInfo)+' ';
+	 if FRight<>nil then
+    Result:=Result+FRight.Infix+' ';
+  Result:=Trim(Result)
+end;
 
 // Вспомогательная процедура для удаления элемента
 procedure TNode.ChangeByGreatestElemFromLeft(var del_node: TNode);
@@ -172,7 +186,28 @@ begin
 end;
 
 
+// Функция конвертирования дерева в строку (обход снизу-вверх)
+function TNode.Postfix:string;
+begin
+  result:='';
+  if FLeft<>nil then
+    result:=result+FLeft.Postfix+' ';
+  if FRight<>nil then
+    result:=result+FRight.Postfix+' ';
+  result:=Trim(result+IntToStr(FInfo));
+end;
 
+
+// Функция конвертирования дерева в строку (обход сверху-вниз)
+function TNode.Prefix:string;
+begin
+  Result:=IntToStr(FInfo)+' ';
+  if FLeft<>nil then
+    Result:=Result+FLeft.Prefix+' ';
+  if FRight<>nil then
+    Result:=Result+FRight.Prefix+' ';
+  Result:=Trim(Result)
+end;
 
 // Отображение узла дерева на компонент TreeView
 procedure TNode.Show(TV:TTreeView; pn:TTreeNode);

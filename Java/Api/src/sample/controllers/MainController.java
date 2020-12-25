@@ -1,34 +1,34 @@
 package sample.controllers;
-import java.awt.event.ActionEvent;
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.awt.*;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.event.*;
+import javafx.scene.control.Menu;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.control.MenuItem;
+
 public class MainController {
+        @FXML
+        private BorderPane Controller;
 
         @FXML
-        private ResourceBundle resources;
+        private Menu Edit;
 
         @FXML
-        private URL location;
+        private Menu View;
 
         @FXML
-        private TextField loginField;
+        private Menu Help;
 
         @FXML
-        private PasswordField passwordField;
+        private MenuItem Info;
+        
+        public void onClickEdit(ActionEvent actionEvent) {
+        }
 
-        @FXML
-        private Button authButton;
+        public void onClickView(ActionEvent actionEvent) {
+        }
 
-        @FXML
-        private Button loginSignUpButton;
-
-
-
-        public void ClickButton(javafx.event.ActionEvent actionEvent) {
+        public void onClickInfo(ActionEvent actionEvent) {
         }
 }

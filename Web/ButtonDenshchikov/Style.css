@@ -1,0 +1,10 @@
+.tb{
+    border-collapse:collapse;
+    width:100%;
+    border: 5px #354251;
+}
+
+.buttonAll{
+    width: 197px;
+    height: 60px;
+}
