@@ -7,7 +7,8 @@ uses
   UCPUForm {CpuForm},
   UVideoCardForm in 'UVideoCardForm.pas' {VideoCardForm},
   UMemoryForm in 'UMemoryForm.pas' {MemoryForm},
-  UReadPrice in 'UReadPrice.pas' {ReadPriceForm};
+  UReadPrice in 'UReadPrice.pas' {ReadPriceForm},
+  Ufactory in 'Ufactory.pas';
 
 {$R *.res}
 
