@@ -1,0 +1,142 @@
+.pTittle{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.divTittle{
+    width: 1200px;
+    height: 60px;
+    background: #FFFFFF;
+}
+* {box-sizing: border-box; margin: 0}
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    white-space: nowrap;
+    padding: 4px 30px;
+    color: rgba(25,25,25,0.74);
+}
+.firstA{
+    color: whitesmoke;
+
+}
+.ulTitle {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    background: #A9A9A9;;
+    width: 1181px;
+}
+li {
+    text-align: center;
+    margin:  0;
+}
+
+.firsLi{
+    background: #514f4a;
+}
+
+.middleLi{
+    border-right: 1px solid;
+    border-color: #8c8a84;
+}
+
+
+.mainDiv li {
+    flex-grow: 1;
+}
+
+.gran {
+    width: 1200px;
+    height: 30px;
+    background: #FFFFFF;
+}
+
+.imgMain{
+    display: flex;
+    justify-content: flex-end;
+    width: 1181px;
+    height: 500px;
+    background-image: url("img.jpg");
+}
+
+.p{
+    margin-left: 20px;
+    color: #DCDCDC;
+}
+
+.h{
+    margin-top: 90px;
+    margin-left: 50px;
+    color: #DCDCDC;
+}
+
+.circle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 55px;
+    margin-right: 40px;
+    width: 260px;
+    height: 260px;
+    background: #8c8a84;
+    border-radius: 50%;
+
+}
+
+.gran2{
+    width: 1200px;
+    height: 35px;
+    background: #FFFFFF;
+}
+
+.imgSome{
+    display: flex;
+    margin: 0 -5px;
+    width: 1200px;
+    height: 300px;
+}
+.imgMini{
+    width: 370px;
+    height: 300px;
+    flex: 1 1 auto;
+    margin: 0 10px;
+}
+
+.divText{
+    display: flex;
+    margin: 0 -5px;
+    width: 1200px;
+    height: 40px;
+}
+
+p{
+    flex: 1 1 auto;
+    margin: 0 10px;
+}
+
+.bottomDiv{
+    width: 1200px;
+    height: 90px;
+    background: #FFFFFF;
+}
+
+.botDivText{
+    display: flex;
+    width: 1181px;
+    height: 55px;
+    background: #8c8a84;
+}
+
+.pBottom{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
