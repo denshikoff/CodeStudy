@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ba37001-3c65-4f72-bc9f-081b2cdc90c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/Java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Api/Api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/Labor.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/out/production/Labor/com/company/Info.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/out/production/Labor/com/company/Input.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/out/production/Labor/com/company/LabWork.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/out/production/Labor/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/out/production/Labor/com/company/MyList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/out/production/Labor/com/company/Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/src/com/company/Info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/src/com/company/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/src/com/company/LabWork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/src/com/company/MyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Labor/src/com/company/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_cedarsoftware_json_io_4_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_hyperskill_hs_test_release_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_stefanbirkner_system_rules_1_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_5_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_assertj_assertj_core_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_assertj_assertj_swing_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_assertj_assertj_swing_junit_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_easytesting_fest_reflect_1_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_easytesting_fest_util_1_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Cats are robots/Simple_Chatty_Bot.Problems-Cats_are_robots.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Cats are robots/Simple_Chatty_Bot.Problems-Cats_are_robots.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Cats are robots/Simple_Chatty_Bot.Problems-Cats_are_robots.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Harry Potter/Simple_Chatty_Bot.Problems-Harry_Potter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Harry Potter/Simple_Chatty_Bot.Problems-Harry_Potter.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Harry Potter/Simple_Chatty_Bot.Problems-Harry_Potter.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Hello, Java/Simple_Chatty_Bot.Problems-Hello,_Java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Hello, Java/Simple_Chatty_Bot.Problems-Hello,_Java.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Hello, Java/Simple_Chatty_Bot.Problems-Hello,_Java.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Hello_/Simple_Chatty_Bot.Problems-Hello_.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Hello_/Simple_Chatty_Bot.Problems-Hello_.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Hello_/Simple_Chatty_Bot.Problems-Hello_.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Shape/Simple_Chatty_Bot.Problems-Shape.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Shape/Simple_Chatty_Bot.Problems-Shape.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Problems/Shape/Simple_Chatty_Bot.Problems-Shape.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Simple Chatty Bot/task/Simple_Chatty_Bot.Simple_Chatty_Bot-task.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Simple Chatty Bot/task/Simple_Chatty_Bot.Simple_Chatty_Bot-task.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Simple Chatty Bot/task/Simple_Chatty_Bot.Simple_Chatty_Bot-task.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Simple_Chatty_Bot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/util/Simple_Chatty_Bot.util.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/util/Simple_Chatty_Bot.util.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/util/Simple_Chatty_Bot.util.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Chatty Bot welcomes you/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Chatty Bot welcomes you/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Chatty Bot welcomes you/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Guess the age/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Guess the age/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Guess the age/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Learning numbers/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Learning numbers/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Learning numbers/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Multiple choice/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Multiple choice/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Multiple choice/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Print your name/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Print your name/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/Print your name/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/classes/java/main/bot/SimpleBot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/classes/java/test/Tests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/reports/tests/test/classes/Tests.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/reports/tests/test/css/base-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/reports/tests/test/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/reports/tests/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/reports/tests/test/js/report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/test-results/test/TEST-Tests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/tmp/compileTestJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/build/tmp/test/jar_extract_9713297874159154378_tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/src/bot/SimpleBot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simple Chatty Bot/task/test/Tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TelegramBotApi/TelegramBotApi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/WebApplication.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/idea_проекты.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/out/production/untitled104/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/out/production/untitled104/com/company/.idea/company.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/out/production/untitled104/com/company/patterns/Singleton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/.idea/company.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/Singleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/adapter/Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/adapter/ImplementsPrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/adapter/Printer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/factory/Bmw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/factory/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/factory/InitObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/factory/Lada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/factory/Shoda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/patterns/factory/typeAuto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/src/com/company/work/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../idea проекты/untitled104.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skillbox/skillbox.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Api/src/sample/controllers/FinishController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Api/src/sample/controllers/SignUpController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Api/src/sample/form/SignUp.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Api/src/sample/form/finishForm.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mTvfSg0pDCbPWQJUZ5rzpx1nAj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../BotConsole" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.inlinked.gradle.project.popup" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ba37001-3c65-4f72-bc9f-081b2cdc90c1" name="Default Changelist" comment="" />
+      <created>1609530499176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609530499176</updated>
+      <workItem from="1609530502557" duration="1379000" />
+      <workItem from="1609532439666" duration="371000" />
+      <workItem from="1609596444021" duration="2554000" />
+      <workItem from="1609672307998" duration="30000" />
+      <workItem from="1609674126568" duration="137000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1609674263597">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609674263597" />
+    <state x="232" y="0" key="new project wizard" timestamp="1609674171504">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="232" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1609674171504" />
+  </component>
+</project>

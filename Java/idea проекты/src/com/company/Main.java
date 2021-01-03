@@ -2,24 +2,17 @@ package com.company;
 
 
 
-import com.company.computer.CPU;
-import com.company.computer.Detail;
-import com.company.computer.TypeProc;
-import com.company.patterns.Singleton;
-import com.company.patterns.factory.Bmw;
-import com.company.patterns.factory.Car;
-import com.company.patterns.factory.InitObject;
-import com.company.patterns.factory.typeAuto;
+import com.company.study.WorkSwitch;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
-
+import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) throws IOException {
-        Car car =  InitObject.getInstance().getCar(typeAuto.bmw);
+        Scanner scanner = new Scanner(System.in);
+        long number1 = scanner.nextLong();
+        long number2 = scanner.nextLong();
+        String symbol = scanner.next();
+        System.out.println(WorkSwitch.calculator(number1, number2, symbol));
     }
 }
