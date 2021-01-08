@@ -63,8 +63,8 @@ public class Cinema {
     public static int makeCost(int countR, int countS, int r) {
         countR--;
         countS--;
-        int allRows = countR * countS;
-        int p = countR / 2;
+        var allRows = countR * countS;
+        var p = countR / 2;
         if (allRows < 60){
             return 10;
         } else if (countR % 2 == 0){
