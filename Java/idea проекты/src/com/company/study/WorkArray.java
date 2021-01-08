@@ -1,7 +1,7 @@
 package com.company.study;
 
 public class WorkArray {
-    public static int sumHighN(int [] array, int N) {
+    public static int sumHighN(int N, int... array) {
         int s = 0;
         for (int n : array) {
             if (n > N) {
@@ -11,7 +11,7 @@ public class WorkArray {
         return s;
     }
 
-    public static boolean checkTogether(int[]a, int n, int m){
+    public static boolean checkTogether(int n, int m, int... a){
         for (int i = 0; i < a.length-1; i++) {
             if ((a[i] == n) && (a[i+1] == m)){
                 return true;
@@ -48,7 +48,7 @@ public class WorkArray {
         return i_max + " " + j_max;
     }
 
-    public static boolean checkPalindrome(char[] chars){
+    public static boolean checkPalindrome(char... chars){
         for (int i = 0; i < chars.length; i++) {
             if (chars[i] != chars[chars.length-1-i]) {
                 return false;
