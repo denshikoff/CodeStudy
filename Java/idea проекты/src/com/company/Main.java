@@ -2,22 +2,19 @@ package com.company;
 
 
 
-import com.company.study.WorkArray;
+import com.company.study.*;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
-        int d = scanner.nextInt();
-        if ((d == 0) || ((b + c) == 0)) {
-            System.out.println("Division by zero!");
-        } else {
-            System.out.println(a / ((b + c) / d));
-        }
+        File sampleFile = new File("sample.txt");
+        String content = "Streams are easy!";
+        FileWriter writer = new FileWriter(sampleFile, true);
+        writer.write(content);
+        writer.close();
+        PrintWriter
     }
 }
