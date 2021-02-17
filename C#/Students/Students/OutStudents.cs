@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Students
 {
-    public partial class Form1 : Form
+    public partial class OutStudents : Form
     {
-        public Form1()
+        public OutStudents()
         {
             InitializeComponent();
-        }
-
-        private void editToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
