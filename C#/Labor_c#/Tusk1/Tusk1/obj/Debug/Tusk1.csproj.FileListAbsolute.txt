@@ -1,0 +1,10 @@
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\bin\Debug\Tusk1.exe.config
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\bin\Debug\Tusk1.exe
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\bin\Debug\Tusk1.pdb
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\obj\Debug\Tusk1.csprojAssemblyReference.cache
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\obj\Debug\Tusk1.Properties.Resources.resources
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\obj\Debug\Tusk1.csproj.GenerateResource.cache
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\obj\Debug\Tusk1.csproj.CoreCompileInputs.cache
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\obj\Debug\Tusk1.exe
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\obj\Debug\Tusk1.pdb
+C:\Users\densh\Desktop\EDU\программирование\c#\study\Tusk1\Tusk1\obj\Debug\Tusk1.MainForm.resources

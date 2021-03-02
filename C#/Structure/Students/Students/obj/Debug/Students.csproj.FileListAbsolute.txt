@@ -1,0 +1,11 @@
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\obj\Debug\Students.csprojAssemblyReference.cache
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\obj\Debug\Students.MainForm.resources
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\obj\Debug\Students.OutStudents.resources
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\obj\Debug\Students.Properties.Resources.resources
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\obj\Debug\Students.csproj.GenerateResource.cache
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\obj\Debug\Students.csproj.CoreCompileInputs.cache
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\bin\Debug\Students.exe.config
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\bin\Debug\Students.exe
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\bin\Debug\Students.pdb
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\obj\Debug\Students.exe
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Students\Students\obj\Debug\Students.pdb
