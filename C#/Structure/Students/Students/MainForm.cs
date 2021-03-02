@@ -15,15 +15,18 @@ namespace Students
     {
         private Form form;
         private Hashtable hashtable;
+        private Student student;
         public MainForm()
         {
             InitializeComponent();
+            hashtable = new Hashtable();
         }
 
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new OutStudents();
+            OutStudents form = new OutStudents();
             form.ShowDialog();
+            student = form.GetInfo;
         }
     }
 }

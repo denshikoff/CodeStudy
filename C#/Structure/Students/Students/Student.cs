@@ -9,23 +9,17 @@ namespace Students
 {
     public class Student
     {
-        private TextBox editFIO;
-        private TextBox editNum;
+        private string editFIO;
+        private int editNum;
         private List<int> list;
 
-        public Student(TextBox editFIO, TextBox editNum, List<int> list)
+        public Student(string editFIO, int editNum, List<int> list)
         {
             this.editFIO = editFIO;
             this.editNum = editNum;
             this.list = list;
         }
 
-        Student(string name, int num, List<int> list)
-        {
-            this.name = name;
-            this.num = num;
-            this.listMark = list;
-        }
         public string name { get; set; }
         
         public int num { get; set; }
