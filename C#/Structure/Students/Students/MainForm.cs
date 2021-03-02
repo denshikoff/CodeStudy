@@ -13,7 +13,7 @@ namespace Students
 {
     public partial class MainForm : System.Windows.Forms.Form
     {
-        private Form form;
+        private OutStudents form;
         private Hashtable hashtable;
         private Student student;
         public MainForm()
@@ -24,9 +24,13 @@ namespace Students
 
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OutStudents form = new OutStudents();
-            form.ShowDialog();
-            student = form.GetInfo;
+            form = new OutStudents();
+            form.Show();
+            this.Hide();
+
+
+            /* student = form.GetInfo();  
+             hashtable.Add(student.num, student); */
         }
     }
 }
