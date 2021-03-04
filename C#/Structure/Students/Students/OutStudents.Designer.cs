@@ -85,18 +85,30 @@ namespace Students
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5"});
             this.comboBox1.Location = new System.Drawing.Point(267, 88);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.Text = "2";
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5"});
             this.comboBox2.Location = new System.Drawing.Point(267, 177);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 28);
             this.comboBox2.TabIndex = 5;
+            this.comboBox2.Text = "2";
             // 
             // label4
             // 
@@ -133,18 +145,30 @@ namespace Students
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5"});
             this.comboBox3.Location = new System.Drawing.Point(440, 88);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 28);
             this.comboBox3.TabIndex = 10;
+            this.comboBox3.Text = "2";
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5"});
             this.comboBox4.Location = new System.Drawing.Point(440, 177);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 28);
             this.comboBox4.TabIndex = 11;
+            this.comboBox4.Text = "2";
             // 
             // label6
             // 

@@ -25,12 +25,10 @@ namespace Students
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             form = new OutStudents();
-            form.Show();
-            this.Hide();
-
-
-            /* student = form.GetInfo();  
-             hashtable.Add(student.num, student); */
+            form.ShowDialog();
+            student = form.GetInfo();
+            hashtable.Add(student.num, student);
+            tableStudents
         }
     }
 }

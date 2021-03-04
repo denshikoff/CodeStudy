@@ -1,0 +1,10 @@
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\bin\Debug\WorkMatr.exe.config
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\bin\Debug\WorkMatr.exe
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\bin\Debug\WorkMatr.pdb
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\obj\Debug\WorkMatr.csprojAssemblyReference.cache
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\obj\Debug\WorkMatr.Form1.resources
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\obj\Debug\WorkMatr.Properties.Resources.resources
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\obj\Debug\WorkMatr.csproj.GenerateResource.cache
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\obj\Debug\WorkMatr.csproj.CoreCompileInputs.cache
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\obj\Debug\WorkMatr.exe
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Labor_c#\Tusk3\WorkMatr\WorkMatr\obj\Debug\WorkMatr.pdb
