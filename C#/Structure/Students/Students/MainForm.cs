@@ -28,7 +28,11 @@ namespace Students
             form.ShowDialog();
             student = form.GetInfo();
             hashtable.Add(student.num, student);
-            tableStudents
+        }
+
+        private void addTable(Student student)
+        {
+            
         }
     }
 }
