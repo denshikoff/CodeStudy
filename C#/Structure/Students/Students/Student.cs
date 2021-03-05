@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,21 +10,50 @@ namespace Students
 {
     public class Student
     {
-        private string editFIO;
-        private int editNum;
-        private List<int> list;
+       
+        
 
-        public Student(string editFIO, int editNum, List<int> list)
+        public Student(string editFIO, int editNum, Hashtable hash)
         {
-            this.editFIO = editFIO;
-            this.editNum = editNum;
-            this.list = list;
+            name = editFIO;
+            num = editNum;
+            exam = hash;
         }
 
         public string name { get; set; }
         
         public int num { get; set; }
 
-        List<int> listMark { get; set; }
+        private Hashtable exam { get; set; }
+
+        public override string ToString()
+        {
+            return name + " Номер студбилета:" + num + " Последняя сессия:" + toStringFromHash(exam) + 
+                " Количество несданных работ:" + countFailMark(exam);
+        }
+
+        private string toStringFromHash(Hashtable hashtable)
+        {
+            string s = "";
+            foreach(DictionaryEntry de in exam)
+            {
+                s += de.Key.ToString() + " " + de.Value.ToString()  + ", ";
+            }
+            return s;
+        }
+
+
+        private int countFailMark(Hashtable mark)
+        {
+            int count = 0;
+            foreach (DictionaryEntry de in mark)
+            {
+                if (de.Value.ToString() == "2")
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
     }
 }

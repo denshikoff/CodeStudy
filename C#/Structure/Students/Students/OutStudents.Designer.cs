@@ -30,18 +30,18 @@ namespace Students
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LabelNum = new System.Windows.Forms.Label();
+            this.labelFIO = new System.Windows.Forms.Label();
+            this.labelMark1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.labelMark3 = new System.Windows.Forms.Label();
             this.EditNum = new System.Windows.Forms.TextBox();
             this.EditFIO = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.labelMark2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelMark4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -55,32 +55,32 @@ namespace Students
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Label1
+            // LabelNum
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(33, 145);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(153, 20);
-            this.Label1.TabIndex = 1;
-            this.Label1.Text = "Номер студбилета";
+            this.LabelNum.AutoSize = true;
+            this.LabelNum.Location = new System.Drawing.Point(33, 145);
+            this.LabelNum.Name = "LabelNum";
+            this.LabelNum.Size = new System.Drawing.Size(153, 20);
+            this.LabelNum.TabIndex = 1;
+            this.LabelNum.Text = "Номер студбилета";
             // 
-            // label2
+            // labelFIO
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ФИО";
+            this.labelFIO.AutoSize = true;
+            this.labelFIO.Location = new System.Drawing.Point(78, 50);
+            this.labelFIO.Name = "labelFIO";
+            this.labelFIO.Size = new System.Drawing.Size(47, 20);
+            this.labelFIO.TabIndex = 2;
+            this.labelFIO.Text = "ФИО";
             // 
-            // label3
+            // labelMark1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(250, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Программирование";
+            this.labelMark1.AutoSize = true;
+            this.labelMark1.Location = new System.Drawing.Point(250, 50);
+            this.labelMark1.Name = "labelMark1";
+            this.labelMark1.Size = new System.Drawing.Size(158, 20);
+            this.labelMark1.TabIndex = 3;
+            this.labelMark1.Text = "Программирование";
             // 
             // comboBox1
             // 
@@ -96,52 +96,6 @@ namespace Students
             this.comboBox1.TabIndex = 4;
             this.comboBox1.Text = "2";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.comboBox2.Location = new System.Drawing.Point(267, 177);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.Text = "2";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(299, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Право";
-            // 
-            // EditNum
-            // 
-            this.EditNum.Location = new System.Drawing.Point(55, 177);
-            this.EditNum.Name = "EditNum";
-            this.EditNum.Size = new System.Drawing.Size(100, 26);
-            this.EditNum.TabIndex = 7;
-            // 
-            // EditFIO
-            // 
-            this.EditFIO.Location = new System.Drawing.Point(55, 88);
-            this.EditFIO.Name = "EditFIO";
-            this.EditFIO.Size = new System.Drawing.Size(100, 26);
-            this.EditFIO.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(453, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Матанализ";
-            // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
@@ -150,11 +104,59 @@ namespace Students
             "3",
             "4",
             "5"});
-            this.comboBox3.Location = new System.Drawing.Point(440, 88);
+            this.comboBox3.Location = new System.Drawing.Point(267, 177);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 10;
+            this.comboBox3.TabIndex = 5;
             this.comboBox3.Text = "2";
+            // 
+            // labelMark3
+            // 
+            this.labelMark3.AutoSize = true;
+            this.labelMark3.Location = new System.Drawing.Point(299, 145);
+            this.labelMark3.Name = "labelMark3";
+            this.labelMark3.Size = new System.Drawing.Size(57, 20);
+            this.labelMark3.TabIndex = 6;
+            this.labelMark3.Text = "Право";
+            // 
+            // EditNum
+            // 
+            this.EditNum.Location = new System.Drawing.Point(55, 177);
+            this.EditNum.Name = "EditNum";
+            this.EditNum.Size = new System.Drawing.Size(100, 26);
+            this.EditNum.TabIndex = 7;
+            this.EditNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EditNum_KeyPress);
+            // 
+            // EditFIO
+            // 
+            this.EditFIO.Location = new System.Drawing.Point(55, 88);
+            this.EditFIO.Name = "EditFIO";
+            this.EditFIO.Size = new System.Drawing.Size(100, 26);
+            this.EditFIO.TabIndex = 8;
+            this.EditFIO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EditFIO_KeyPress);
+            // 
+            // labelMark2
+            // 
+            this.labelMark2.AutoSize = true;
+            this.labelMark2.Location = new System.Drawing.Point(453, 50);
+            this.labelMark2.Name = "labelMark2";
+            this.labelMark2.Size = new System.Drawing.Size(94, 20);
+            this.labelMark2.TabIndex = 9;
+            this.labelMark2.Text = "Матанализ";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.comboBox2.Location = new System.Drawing.Point(440, 88);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 28);
+            this.comboBox2.TabIndex = 10;
+            this.comboBox2.Text = "2";
             // 
             // comboBox4
             // 
@@ -170,14 +172,14 @@ namespace Students
             this.comboBox4.TabIndex = 11;
             this.comboBox4.Text = "2";
             // 
-            // label6
+            // labelMark4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(436, 145);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Иностранный язык";
+            this.labelMark4.AutoSize = true;
+            this.labelMark4.Location = new System.Drawing.Point(436, 145);
+            this.labelMark4.Name = "labelMark4";
+            this.labelMark4.Size = new System.Drawing.Size(151, 20);
+            this.labelMark4.TabIndex = 12;
+            this.labelMark4.Text = "Иностранный язык";
             // 
             // label7
             // 
@@ -194,18 +196,18 @@ namespace Students
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 317);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelMark4);
             this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.labelMark2);
             this.Controls.Add(this.EditFIO);
             this.Controls.Add(this.EditNum);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.labelMark3);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.labelMark1);
+            this.Controls.Add(this.labelFIO);
+            this.Controls.Add(this.LabelNum);
             this.Controls.Add(this.button1);
             this.Name = "OutStudents";
             this.Text = "Students";
@@ -217,18 +219,18 @@ namespace Students
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label Label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LabelNum;
+        private System.Windows.Forms.Label labelFIO;
+        private System.Windows.Forms.Label labelMark1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label labelMark3;
         private System.Windows.Forms.TextBox EditNum;
         private System.Windows.Forms.TextBox EditFIO;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label labelMark2;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelMark4;
         private System.Windows.Forms.Label label7;
     }
 }

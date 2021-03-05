@@ -34,6 +34,7 @@ namespace Students
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListStudent = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@ namespace Students
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(699, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(370, 33);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,15 +79,28 @@ namespace Students
             this.studentToolStripMenuItem1.Name = "studentToolStripMenuItem1";
             this.studentToolStripMenuItem1.Size = new System.Drawing.Size(174, 34);
             this.studentToolStripMenuItem1.Text = "student";
+            this.studentToolStripMenuItem1.Click += new System.EventHandler(this.studentToolStripMenuItem1_Click);
+            // 
+            // ListStudent
+            // 
+            this.ListStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListStudent.Location = new System.Drawing.Point(0, 33);
+            this.ListStudent.Multiline = true;
+            this.ListStudent.Name = "ListStudent";
+            this.ListStudent.ReadOnly = true;
+            this.ListStudent.Size = new System.Drawing.Size(370, 209);
+            this.ListStudent.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 431);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(370, 242);
+            this.Controls.Add(this.ListStudent);
             this.Controls.Add(this.menuStrip1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Студенты";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -100,6 +114,7 @@ namespace Students
         private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem1;
+        private System.Windows.Forms.TextBox ListStudent;
     }
 }
 

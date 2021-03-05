@@ -28,16 +28,34 @@ namespace Students
 
         public Student GetInfo()
         {
-            List<int> list = new List<int>();
-            list.Add(Convert.ToInt32(comboBox1.Text));
-            list.Add(Convert.ToInt32(comboBox2.Text));
-            list.Add(Convert.ToInt32(comboBox3.Text));
-            list.Add(Convert.ToInt32(comboBox4.Text));
-            return new Student(EditFIO.Text, Convert.ToInt32(EditNum.Text), list);
+            Hashtable marks = new Hashtable();
+            marks.Add(labelMark1.Text, comboBox1.SelectedItem);
+            marks.Add(labelMark2.Text, comboBox3.SelectedItem);
+            marks.Add(labelMark3.Text, comboBox2.SelectedItem);
+            marks.Add(labelMark4.Text, comboBox4.SelectedItem);
+            return new Student(EditFIO.Text, Convert.ToInt32(EditNum.Text), marks);
         }
         public int GetKey()
         {
             return Convert.ToInt32(EditNum);
+        }
+
+        private void EditFIO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char letter = e.KeyChar;
+            if (!Char.IsLetter(letter))
+            {
+                e.Handled = true;   //если не буква, то необрабатываем(игнорируем)
+            } 
+        }
+
+        private void EditNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number))    //если не цифра, то необрабатываем(игнорируем)
+            {
+                e.Handled = true;
+            } 
         }
     }
 }

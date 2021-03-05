@@ -72,7 +72,7 @@ namespace WorkMatr
              }
         }
         // удаление строк, содержащих нули
-        public bool DelStr()//true, если результат пустая матрица
+        public bool DelStrWithNull()//true, если результат пустая матрица
         {
     
          int i, j;
@@ -101,26 +101,33 @@ namespace WorkMatr
         }
 
 
-        public void DelStrWithSumMax()
+        public void StrWithSumMax()
         {
-            int[] sumMax = new int[n_str];
-           
+            int[] sumMax = new int[n_str];     //массив с набором сумм строк
+            int[] ar = new int[n_str];         //массив для каждой строки
             
+            //подчет сумм строк
             for(int i = 0; i < n_str; i++)
             {
                 for(int j = 0; j < n_str; j++)
                 {
-                    sumMax[i] = matrix[i, j]; 
+                    ar[j] = matrix[i, j]; 
                 }
 
-                sumMax[i] = SumInStr(sumMax);
+                sumMax[i] = SumInStr(ar);   
             }
-            int max = Max(sumMax);
-
-            for(int i = 0; i < n_str; i++)
+            int max = Max(sumMax);    //поиск максимума
+            for(int i = 0; i < n_str; i++)        //удаление строк с максимальной сумой
+            {
+                if(sumMax[i] == max)
+                {
+                    DelStr(i);
+                }
+            }
+            
         }
 
-        private int SumInStr(int[] ar)
+        private int SumInStr(int[] ar)       //метод суммы строк
         {
             int s = 0;
             for(int i = 0; i < n_str; i++)
@@ -130,20 +137,27 @@ namespace WorkMatr
             return s;
         }
 
-        private int Max(int[] ar)
+        private int Max(int[] ar)  //метод поиск максимума
         {
             int max = ar[0];
+
             for(int i = 1; i < n_str; i++)
             {
                 if(max < ar[i])
                 {
-                    ar[i] = max;
+                    max = ar[i];
                 }
             }
             return max;
         }
 
-
+        private void DelStr(int i) //метод удаления строки               
+        {
+            for (int k = i; k < n_str - 1; k++)
+                for (int j = 0; j < n_col; j++)
+                    matrix[k, j] = matrix[k + 1, j];
+            n_str--;
+        }
     }
         
 }

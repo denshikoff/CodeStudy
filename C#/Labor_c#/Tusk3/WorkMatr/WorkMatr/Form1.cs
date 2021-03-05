@@ -43,10 +43,11 @@ namespace WorkMatr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView.Visible = false;
+           
             MatrMake matr = new MatrMake(N);
             matr.GridToMatrix(dataGridView);
-            
+            matr.StrWithSumMax();
+            matr.MatrixToGrid(dataGridView);
         }
     }
 }
