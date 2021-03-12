@@ -117,7 +117,7 @@ namespace WorkMatr
                 sumMax[i] = SumInStr(ar);   
             }
             int max = Max(sumMax);    //поиск максимума
-            for(int i = 0; i < n_str; i++)        //удаление строк с максимальной сумой
+            for(int i = n_str-1; i >= 0; i--)        //удаление строк с максимальной суммой
             {
                 if(sumMax[i] == max)
                 {

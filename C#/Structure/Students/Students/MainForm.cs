@@ -14,14 +14,15 @@ namespace Students
     public partial class MainForm : System.Windows.Forms.Form
     {
         private OutStudents form;
-        private Hashtable hashtable;
+        private HashTable hashtable;
         private Student student;
+        private int row = 0;
+      
 
         public MainForm()  //создание хэштаблицы, элементов формы
         {
             InitializeComponent();
-            hashtable = new Hashtable();
-            ListStudent.Lines = new string[20];
+            hashtable = new HashTable(50);            
         }
 
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,17 +30,22 @@ namespace Students
             form = new OutStudents();            //открытие формы ввода, 
             form.ShowDialog();                                     
             student = form.GetInfo();          //введение данных
-            hashtable.Add(student.num, student);  //добавление в хэштаблицу
+            hashtable.Add(student);  //добавление в хэштаблицу
         }
 
         private void addOnForm(int key)         //вывод данных о студенте на форму
         {
-            if (hashtable.ContainsKey(key))
+            if (hashtable.ContainsKey(key))    //если ключ есть то добавляем
             {
-               ListStudent.Text = hashtable[key].ToString();
+                Student student = hashtable.Find(key);
+                TableStudent.Rows.Add();
+                TableStudent[0, row].Value = student.Name;
+                TableStudent[1, row].Value = student.Num;
+                TableStudent[2, row].Value = Student.countFailMark(student.Exam);            
+                row++;
             }  else
             {
-               ListStudent.Text = "Студента не найдено"; 
+                MessageBox.Show("Студент не найден");
             }
                        
         }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Students
 {
     public class Student
@@ -15,35 +16,18 @@ namespace Students
 
         public Student(string editFIO, int editNum, Hashtable hash)
         {
-            name = editFIO;
-            num = editNum;
-            exam = hash;
+            Name = editFIO;
+            Num = editNum;
+            Exam = hash;
         }
 
-        public string name { get; set; }
+        public string Name { get; set; }
         
-        public int num { get; set; }
+        public int Num { get; set; }
 
-        private Hashtable exam { get; set; }
-
-        public override string ToString()
-        {
-            return name + " Номер студбилета:" + num + " Последняя сессия:" + toStringFromHash(exam) + 
-                " Количество несданных работ:" + countFailMark(exam);
-        }
-
-        private string toStringFromHash(Hashtable hashtable)
-        {
-            string s = "";
-            foreach(DictionaryEntry de in exam)
-            {
-                s += de.Key.ToString() + " " + de.Value.ToString()  + ", ";
-            }
-            return s;
-        }
-
-
-        private int countFailMark(Hashtable mark)
+        public Hashtable Exam { get; set; }
+      
+        public static int countFailMark(Hashtable mark)
         {
             int count = 0;
             foreach (DictionaryEntry de in mark)
@@ -55,5 +39,11 @@ namespace Students
             }
             return count;
         }
+
+        public override string ToString()
+        {
+            return Name + " " + Num + " " + countFailMark(Exam);
+        }
+
     }
 }

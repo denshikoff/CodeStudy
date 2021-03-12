@@ -72,7 +72,7 @@ namespace WorkMatr
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Работа с матрицами";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
