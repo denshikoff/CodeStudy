@@ -30,7 +30,7 @@ namespace WorkMatr
         private void InitializeComponent()
         {
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button = new System.Windows.Forms.Button();
             this.EditSize = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -45,15 +45,15 @@ namespace WorkMatr
             this.dataGridView.Size = new System.Drawing.Size(526, 340);
             this.dataGridView.TabIndex = 0;
             // 
-            // button1
+            // button
             // 
-            this.button1.Location = new System.Drawing.Point(306, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 36);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button.Location = new System.Drawing.Point(306, 365);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(131, 36);
+            this.button.TabIndex = 1;
+            this.button.Text = "выполнить";
+            this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.button1_Click);
             // 
             // EditSize
             // 
@@ -62,6 +62,7 @@ namespace WorkMatr
             this.EditSize.Size = new System.Drawing.Size(100, 26);
             this.EditSize.TabIndex = 2;
             this.EditSize.TextChanged += new System.EventHandler(this.EditSize_TextChanged);
+            this.EditSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EditSize_KeyPress);
             // 
             // Form1
             // 
@@ -69,7 +70,7 @@ namespace WorkMatr
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 413);
             this.Controls.Add(this.EditSize);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.dataGridView);
             this.Name = "Form1";
             this.Text = "Работа с матрицами";
@@ -82,7 +83,7 @@ namespace WorkMatr
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button;
         private System.Windows.Forms.TextBox EditSize;
     }
 }

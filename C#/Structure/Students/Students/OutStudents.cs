@@ -28,11 +28,11 @@ namespace Students
 
         public Student GetInfo()
         {
-            Hashtable marks = new Hashtable();
-            marks.Add(labelMark1.Text, comboBox1.SelectedItem);
-            marks.Add(labelMark2.Text, comboBox3.SelectedItem);
-            marks.Add(labelMark3.Text, comboBox2.SelectedItem);
-            marks.Add(labelMark4.Text, comboBox4.SelectedItem);
+            ArrayList marks = new ArrayList();
+            marks.Add(comboBox1.SelectedItem);
+            marks.Add(comboBox2.SelectedItem);
+            marks.Add(comboBox3.SelectedItem);
+            marks.Add(comboBox4.SelectedItem);
             return new Student(EditFIO.Text, Convert.ToInt32(EditNum.Text), marks);
         }
         public int GetKey()

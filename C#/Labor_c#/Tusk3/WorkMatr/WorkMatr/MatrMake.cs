@@ -12,12 +12,14 @@ namespace WorkMatr
     {
         private int n_str, //количество строк
                     n_col; //количество столбцов
-        private int[,] matrix; // обрабатываемая матрица
+        private int[][] matrix; // обрабатываемая матрица
         public MatrMake(int n)
         {
             n_str = n; // на входе матрица квадратная
             n_col = n;
-            matrix = new int[n, n];
+            matrix = new int[n][];
+            for (int i = 0; i < n; i++)
+                matrix[i] = new int[n];
         }
         //заполнение матрицы из DataGridView
         public void GridToMatrix(DataGridView dgv)
@@ -30,9 +32,9 @@ namespace WorkMatr
                     txtCell = dgv.Rows[i].Cells[j];
                     string s = txtCell.Value.ToString();
                     if (s == "")
-                        matrix[i, j] = 0;
+                        matrix[i][j] = 0;
                     else
-                        matrix[i, j] = Int32.Parse(s);
+                        matrix[i][j] = Int32.Parse(s);
                 }
             }
         }
@@ -67,7 +69,7 @@ namespace WorkMatr
                 for (int j = 0; j < n_col; j++)
                 {
                     txtCell = dgv.Rows[i].Cells[j];
-                    txtCell.Value = matrix[i, j].ToString();
+                    txtCell.Value = matrix[i][j].ToString();
                 }
              }
         }
@@ -82,14 +84,14 @@ namespace WorkMatr
          {
             ok = true;
             for (j = 0; j < n_col && ok; j++)
-                if (matrix[i, j] == 0)
+                if (matrix[i][j] == 0)
                     ok = false;
                 if (!ok)
                 {
                     //удалить i строку
                     for (int k = i; k < n_str - 1; k++)
                         for (j = 0; j < n_col; j++)
-                            matrix[k, j] = matrix[k + 1, j];
+                            matrix[k][j] = matrix[k + 1][j];
                     n_str--;
                 }
                 else i++;
@@ -104,17 +106,18 @@ namespace WorkMatr
         public void StrWithSumMax()
         {
             int[] sumMax = new int[n_str];     //массив с набором сумм строк
-            int[] ar = new int[n_str];         //массив для каждой строки
-            
+                                               // int[] ar = new int[n_str];         //массив для каждой строки
+            int sum = 0;
             //подчет сумм строк
             for(int i = 0; i < n_str; i++)
             {
                 for(int j = 0; j < n_str; j++)
                 {
-                    ar[j] = matrix[i, j]; 
+                    sum += matrix[i][j];
                 }
 
-                sumMax[i] = SumInStr(ar);   
+                sumMax[i] = sum;
+                sum = 0;
             }
             int max = Max(sumMax);    //поиск максимума
             for(int i = n_str-1; i >= 0; i--)        //удаление строк с максимальной суммой
@@ -155,9 +158,8 @@ namespace WorkMatr
         {
             for (int k = i; k < n_str - 1; k++)
                 for (int j = 0; j < n_col; j++)
-                    matrix[k, j] = matrix[k + 1, j];
+                    matrix[k][j] = matrix[k + 1][j];
             n_str--;
         }
-    }
-        
+    }      
 }

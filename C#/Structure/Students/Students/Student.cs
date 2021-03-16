@@ -11,28 +11,25 @@ namespace Students
 {
     public class Student
     {
-       
-        
-
-        public Student(string editFIO, int editNum, Hashtable hash)
+        public Student(string editFIO, int editNum, ArrayList list)
         {
             Name = editFIO;
             Num = editNum;
-            Exam = hash;
+            Exam = list;
         }
 
         public string Name { get; set; }
         
         public int Num { get; set; }
 
-        public Hashtable Exam { get; set; }
+        public ArrayList Exam { get; set; }
       
-        public static int countFailMark(Hashtable mark)
+        public static int countFailMark(ArrayList mark)
         {
             int count = 0;
-            foreach (DictionaryEntry de in mark)
+            foreach(object i in mark)
             {
-                if (de.Value.ToString() == "2")
+                if (i.ToString() == "2")
                 {
                     count++;
                 }
@@ -44,6 +41,5 @@ namespace Students
         {
             return Name + " " + Num + " " + countFailMark(Exam);
         }
-
     }
 }
