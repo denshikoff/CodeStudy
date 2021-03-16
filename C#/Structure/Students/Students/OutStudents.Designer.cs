@@ -209,7 +209,9 @@ namespace Students
             this.Controls.Add(this.labelFIO);
             this.Controls.Add(this.LabelNum);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OutStudents";
+            this.ShowInTaskbar = false;
             this.Text = "Students";
             this.ResumeLayout(false);
             this.PerformLayout();

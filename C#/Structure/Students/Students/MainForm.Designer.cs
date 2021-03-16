@@ -51,7 +51,7 @@ namespace Students
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(830, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(757, 33);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,11 +92,13 @@ namespace Students
             this.Column1,
             this.Column2,
             this.Column3});
-            this.TableStudent.Location = new System.Drawing.Point(12, 46);
+            this.TableStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TableStudent.Location = new System.Drawing.Point(0, 33);
             this.TableStudent.Name = "TableStudent";
+            this.TableStudent.ReadOnly = true;
             this.TableStudent.RowHeadersWidth = 62;
             this.TableStudent.RowTemplate.Height = 28;
-            this.TableStudent.Size = new System.Drawing.Size(811, 424);
+            this.TableStudent.Size = new System.Drawing.Size(757, 502);
             this.TableStudent.TabIndex = 3;
             // 
             // Column1
@@ -128,7 +130,7 @@ namespace Students
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(830, 482);
+            this.ClientSize = new System.Drawing.Size(757, 535);
             this.Controls.Add(this.TableStudent);
             this.Controls.Add(this.menuStrip1);
             this.Name = "MainForm";

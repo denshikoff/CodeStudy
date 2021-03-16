@@ -89,6 +89,17 @@ namespace Students
             return result;
         }
 
+        //добавление  в файл
+        public bool HashInputFile(string path)
+        {
+
+        }
+
+        //чтение из файла
+        public bool HashOutputFile(string path)
+        {
+
+        }
         public bool ContainsKey(int key)
         {
             Array.Sort(Keys);

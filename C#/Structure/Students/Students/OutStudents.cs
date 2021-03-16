@@ -43,7 +43,7 @@ namespace Students
         private void EditFIO_KeyPress(object sender, KeyPressEventArgs e)
         {
             char letter = e.KeyChar;
-            if (!Char.IsLetter(letter))
+            if (!Char.IsLetter(letter) && e.KeyChar != (char)Keys.Back && e.KeyChar != (char)Keys.Delete)
             {
                 e.Handled = true;   //если не буква, то необрабатываем(игнорируем)
             } 
@@ -52,7 +52,7 @@ namespace Students
         private void EditNum_KeyPress(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
-            if (!Char.IsDigit(number))    //если не цифра, то необрабатываем(игнорируем)
+            if (!Char.IsDigit(number) && e.KeyChar != (char)Keys.Back && e.KeyChar != (char)Keys.Delete)    //если не цифра, то необрабатываем(игнорируем)
             {
                 e.Handled = true;
             } 

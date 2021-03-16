@@ -52,7 +52,6 @@
     <Compile Include="EditKey.Designer.cs">
       <DependentUpon>EditKey.cs</DependentUpon>
     </Compile>
-    <Compile Include="HashGeneric\HashTable.cs" />
     <Compile Include="Hash\HashTable.cs" />
     <Compile Include="Hash\List.cs" />
     <Compile Include="MainForm.cs">
