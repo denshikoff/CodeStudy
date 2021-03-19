@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -103,7 +104,7 @@ namespace Students
                 writer.WriteLine(ToString());
             } catch
             {
-                MessageBox.Show("Файд не найден");
+                MessageBox.Show("Файл не найден");
                 return false;
                 
             } finally
@@ -127,15 +128,31 @@ namespace Students
         {
             FileStream fileStream = null;
             StreamReader reader = null;
+            ArrayList array = new ArrayList();
             try
             {
                 fileStream = new FileStream(path, FileMode.Open);
                 reader = new StreamReader(fileStream);
                 string line;
-                while((line = reader.ReadLine()) != null)
+                while(!reader.EndOfStream)
                 {
-
+                   if("".Equals(reader.ReadLine()))
+                    {
+                        reader.ReadLine();
+                    } else
+                    {
+                        
+                       Add(new Student())
+                    }
                 }
+            }  catch(IOException e)
+            {
+                return false;
+            }
+            finally
+            {
+                reader.Close();
+                fileStream.Close();
             }
         }
         public bool ContainsKey(int key)
