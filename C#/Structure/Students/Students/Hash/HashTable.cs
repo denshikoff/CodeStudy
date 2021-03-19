@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Students
 {
@@ -92,13 +94,49 @@ namespace Students
         //добавление  в файл
         public bool HashInputFile(string path)
         {
-
+            FileStream fileStream = null;
+            StreamWriter writer = null;
+            try
+            {
+                fileStream = new FileStream(path, FileMode.Open);
+                writer = new StreamWriter(fileStream);
+                writer.WriteLine(ToString());
+            } catch
+            {
+                MessageBox.Show("Файд не найден");
+                return false;
+                
+            } finally
+            {
+                writer.Close();
+                fileStream.Close();  
+            }
+            return true;
+        }
+        public bool HashInputFile()
+        { 
+            FileStream fileStream = new FileStream("fileNew.txt", FileMode.Create);
+            StreamWriter writer = new StreamWriter(fileStream);
+            writer.WriteLine(ToString());
+            writer.Close();
+            return true;
         }
 
         //чтение из файла
         public bool HashOutputFile(string path)
         {
+            FileStream fileStream = null;
+            StreamReader reader = null;
+            try
+            {
+                fileStream = new FileStream(path, FileMode.Open);
+                reader = new StreamReader(fileStream);
+                string line;
+                while((line = reader.ReadLine()) != null)
+                {
 
+                }
+            }
         }
         public bool ContainsKey(int key)
         {

@@ -13,6 +13,16 @@ namespace WorkMatr
         private int n_str, //количество строк
                     n_col; //количество столбцов
         private int[][] matrix; // обрабатываемая матрица
+        private int countDelete;
+        public MatrMake(int n, int m)
+        {
+            n_str = n; // на входе матрица квадратная
+            n_col = m;
+            matrix = new int[n][];
+            for (int i = 0; i < n; i++)
+                matrix[i] = new int[m];
+        }
+
         public MatrMake(int n)
         {
             n_str = n; // на входе матрица квадратная
@@ -21,6 +31,7 @@ namespace WorkMatr
             for (int i = 0; i < n; i++)
                 matrix[i] = new int[n];
         }
+
         //заполнение матрицы из DataGridView
         public void GridToMatrix(DataGridView dgv)
         {
@@ -103,15 +114,19 @@ namespace WorkMatr
         }
 
 
-        public void StrWithSumMax()
+        public int StrWithSumMax()
         {
             int[] sumMax = new int[n_str];     //массив с набором сумм строк
-                                               // int[] ar = new int[n_str];         //массив для каждой строки
+            int k = 0;
             int sum = 0;
+            if(n_str == 0)
+            {
+                return 0;
+            }
             //подчет сумм строк
             for(int i = 0; i < n_str; i++)
             {
-                for(int j = 0; j < n_str; j++)
+                for(int j = 0; j < n_col; j++)
                 {
                     sum += matrix[i][j];
                 }
@@ -125,9 +140,10 @@ namespace WorkMatr
                 if(sumMax[i] == max)
                 {
                     DelStr(i);
+                    k++;
                 }
             }
-            
+            return k;
         }
 
         private int SumInStr(int[] ar)       //метод суммы строк

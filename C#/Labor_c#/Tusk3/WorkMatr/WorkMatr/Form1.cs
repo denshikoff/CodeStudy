@@ -12,7 +12,10 @@ namespace WorkMatr
 {
     public partial class Form1 : Form
     {
-        private int N;
+        //6. Удалить строки, сумма элементов которых максимальна
+        private int N, M;
+        private MatrMake matr;
+        
         public Form1()
         {
             InitializeComponent();
@@ -22,10 +25,18 @@ namespace WorkMatr
         {
             //установка размера матрицы и DataGridView
             int i;
-            N = Int32.Parse(EditSize.Text);
+            if(EditSizeCol.Text == "")
+            {
+                N = M = Int32.Parse(EditSizeRow.Text);
+            }  else
+            {
+                M = Int32.Parse(EditSizeCol.Text);
+                N = Int32.Parse(EditSizeRow.Text);
+            }
+           
             DataTable matr = new DataTable("matr");
             DataColumn[] cols = new DataColumn[N];
-            for (i = 0; i < N; i++)
+            for (i = 0; i < M; i++)
             {
                 cols[i] = new DataColumn(i.ToString());
                 matr.Columns.Add(cols[i]);
@@ -37,15 +48,27 @@ namespace WorkMatr
                 matr.Rows.Add(newRow);
             }
             dataGridView.DataSource = matr;
-            for (i = 0; i < N; i++)
+            for (i = 0; i < M; i++)
                 dataGridView.Columns[i].Width = 50;
             }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            MatrMake matr = new MatrMake(N);
-            matr.GridToMatrix(dataGridView);
+            if(N == M)
+            {
+                matr = new MatrMake(N);
+            } else
+            {
+                matr = new MatrMake(N, M);
+            }
+
+               
+            matr.GridToMatrix(dataGridView);          
+            matr.MatrixToGrid(dataGridView);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             matr.StrWithSumMax();
             matr.MatrixToGrid(dataGridView);
         }
