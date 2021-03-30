@@ -17,6 +17,10 @@ namespace Students
             Num = editNum;
             Exam = list;
         }
+        public Student()
+        {
+            
+        }
 
         public string Name { get; set; }
         

@@ -105,6 +105,9 @@ namespace Students
             } catch
             {
                 MessageBox.Show("Файл не найден");
+                fileStream = File.Create("newFile.txt");
+                writer = new StreamWriter(fileStream);
+                writer.WriteLine(ToString());
                 return false;
                 
             } finally
@@ -115,11 +118,25 @@ namespace Students
             return true;
         }
         public bool HashInputFile()
-        { 
-            FileStream fileStream = new FileStream("fileNew.txt", FileMode.Create);
-            StreamWriter writer = new StreamWriter(fileStream);
-            writer.WriteLine(ToString());
-            writer.Close();
+        {
+
+            FileStream fileStream = null;
+            StreamWriter writer =null;
+            try
+            {
+                fileStream = File.Create(@"Structure\Students\Students\files\NewFile.txt");
+                writer.WriteLine(ToString());
+            }
+            catch
+            {
+                MessageBox.Show("Проблемы с путем файла");
+                return false;
+            }
+            finally
+            {
+                writer.Close();
+                fileStream.Close();
+            }
             return true;
         }
 
@@ -129,24 +146,47 @@ namespace Students
             FileStream fileStream = null;
             StreamReader reader = null;
             ArrayList array = new ArrayList();
+            Student student = new Student();
             try
             {
                 fileStream = new FileStream(path, FileMode.Open);
                 reader = new StreamReader(fileStream);
                 string line;
-                while(!reader.EndOfStream)
+                int k = 0;               
+                while((line = reader.ReadLine()) != null)
                 {
-                   if("".Equals(reader.ReadLine()))
+                    switch (k)
                     {
-                        reader.ReadLine();
-                    } else
-                    {
-                        
-                       Add(new Student())
+                        case 0:
+                            {
+                                student.Name = line;
+                                break;
+                            }
+                        case 1:
+                            {
+                                student.Num = Convert.ToInt32(line);
+                                break;
+                            }
+                        case 3:
+                            {
+                               ArrayList arrayList = new ArrayList(); 
+                               foreach(char c in line)
+                                {
+                                    if(c != ' ')
+                                    {
+                                        arrayList.Add(c);
+                                    }
+                                }
+                                student.Exam = arrayList;
+                                break;
+                            }                           
                     }
+                    k = k == 3 ? 0: k++;
                 }
-            }  catch(IOException e)
+                
+            }  catch
             {
+                MessageBox.Show("Файл не найден");
                 return false;
             }
             finally
@@ -154,6 +194,8 @@ namespace Students
                 reader.Close();
                 fileStream.Close();
             }
+
+            return true;
         }
         public bool ContainsKey(int key)
         {

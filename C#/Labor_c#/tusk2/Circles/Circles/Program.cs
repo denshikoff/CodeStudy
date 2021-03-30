@@ -11,14 +11,9 @@ namespace Circles
 
         static void Main(string[] args)
         {
-
-        }
-
-        private int[] readCircle()
-        {
-            
-            Console.WriteLine("Введите количество окружностей");
-            Console.ReadLine(n);
+            Circle[] circles = Circle.readCircle();
+            Console.WriteLine("Число пересекающихся окружностей: " + Circle.countCommonCircle(circles));
+            Console.ReadKey();
         }
     }
 }

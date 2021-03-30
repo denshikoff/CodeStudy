@@ -38,6 +38,11 @@ namespace Students
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.forReadingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.forWritingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableStudent)).BeginInit();
             this.SuspendLayout();
@@ -47,11 +52,12 @@ namespace Students
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(757, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(740, 36);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +72,7 @@ namespace Students
             // studentToolStripMenuItem
             // 
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.studentToolStripMenuItem.Text = "student";
             this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
@@ -87,18 +93,20 @@ namespace Students
             // 
             // TableStudent
             // 
+            this.TableStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TableStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TableStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.TableStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TableStudent.Location = new System.Drawing.Point(0, 33);
             this.TableStudent.Name = "TableStudent";
             this.TableStudent.ReadOnly = true;
             this.TableStudent.RowHeadersWidth = 62;
             this.TableStudent.RowTemplate.Height = 28;
-            this.TableStudent.Size = new System.Drawing.Size(757, 502);
+            this.TableStudent.Size = new System.Drawing.Size(740, 418);
             this.TableStudent.TabIndex = 3;
             // 
             // Column1
@@ -125,12 +133,51 @@ namespace Students
             this.Column3.ReadOnly = true;
             this.Column3.Width = 150;
             // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createFileToolStripMenuItem,
+            this.openFileToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 32);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // createFileToolStripMenuItem
+            // 
+            this.createFileToolStripMenuItem.Name = "createFileToolStripMenuItem";
+            this.createFileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.createFileToolStripMenuItem.Text = "Create File";
+            this.createFileToolStripMenuItem.Click += new System.EventHandler(this.createFileToolStripMenuItem_Click);
+            // 
+            // openFileToolStripMenuItem
+            // 
+            this.openFileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.forReadingToolStripMenuItem,
+            this.forWritingToolStripMenuItem});
+            this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.openFileToolStripMenuItem.Text = "Open File";
+            // 
+            // forReadingToolStripMenuItem
+            // 
+            this.forReadingToolStripMenuItem.Name = "forReadingToolStripMenuItem";
+            this.forReadingToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.forReadingToolStripMenuItem.Text = "for Reading";
+            this.forReadingToolStripMenuItem.Click += new System.EventHandler(this.forReadingToolStripMenuItem_Click);
+            // 
+            // forWritingToolStripMenuItem
+            // 
+            this.forWritingToolStripMenuItem.Name = "forWritingToolStripMenuItem";
+            this.forWritingToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.forWritingToolStripMenuItem.Text = "for Writing";
+            this.forWritingToolStripMenuItem.Click += new System.EventHandler(this.forWritingToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(757, 535);
+            this.ClientSize = new System.Drawing.Size(740, 451);
             this.Controls.Add(this.TableStudent);
             this.Controls.Add(this.menuStrip1);
             this.Name = "MainForm";
@@ -153,6 +200,11 @@ namespace Students
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem forReadingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem forWritingToolStripMenuItem;
     }
 }
 

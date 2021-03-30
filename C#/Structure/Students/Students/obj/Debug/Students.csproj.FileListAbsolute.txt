@@ -21,3 +21,4 @@ C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Structure\Student
 C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Structure\Students\Students\obj\Debug\Students.exe
 C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Structure\Students\Students\obj\Debug\Students.pdb
 C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Structure\Students\Students\obj\Debug\Students.EditKey.resources
+C:\Users\densh\OneDrive\Документы\GitHub\CodeStudy\C#\Structure\Students\Students\obj\Debug\Students.FormPath.resources

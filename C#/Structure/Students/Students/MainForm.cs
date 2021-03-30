@@ -30,7 +30,19 @@ namespace Students
             form = new OutStudents();            //открытие формы ввода, 
             form.ShowDialog();                                     
             student = form.GetInfo();          //введение данных
-            hashtable.Add(student);  //добавление в хэштаблицу
+            if (hashtable.Add(student))  //добавление в хэштаблицу
+            {
+                TableStudent.Rows.Add();
+                TableStudent[0, row].Value = student.Name;
+                TableStudent[1, row].Value = student.Num;
+                TableStudent[2, row].Value = Student.countFailMark(student.Exam);
+                row++;
+            }  else
+            {
+                MessageBox.Show("Данные не добавлены");
+            }
+                  
+            
         }
 
         private void addOnForm(int key)         //вывод данных о студенте на форму
@@ -47,7 +59,6 @@ namespace Students
             {
                 MessageBox.Show("Студент не найден");
             }
-                       
         }
 
         private void studentToolStripMenuItem1_Click(object sender, EventArgs e)  //поиск и вывод по студ билету
@@ -57,5 +68,23 @@ namespace Students
             addOnForm(editKey.getKey());
         }
 
+        private void createFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hashtable.HashInputFile(); 
+        }
+
+        private void forReadingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPath formPath = new FormPath();
+            formPath.ShowDialog();
+            hashtable.HashOutputFile(formPath.getPath());
+        }
+
+        private void forWritingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPath formPath = new FormPath();
+            formPath.ShowDialog();
+            hashtable.HashInputFile(formPath.getPath());
+        }
     }
 }

@@ -12,7 +12,6 @@ var x,y,r:array[1..nmax] of real;
     n,i,j,k,f:byte;
     s:real;
 begin
-
 repeat
 write('Количество окружностей до ',nmax,' n=');
 readln(n);
