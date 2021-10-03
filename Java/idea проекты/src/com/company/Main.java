@@ -17,4 +17,11 @@ public class Main {
         writer.close();
         PrintWriter
     }
+
+    private static String toCamelCase(String s){
+        StringBuilder str = StringBuilder(s);
+
+
+        return "";
+    }
 }
